@@ -31,24 +31,24 @@ namespace SimpleTestApi.Controllers
         }
 
         // POST api/<TestController>
-        [HttpPost]
-        public string Post([FromBody] string value)
+        [HttpPost("{id}")]
+        public string Post(int id)
         {
-            return testPost;
+            return "posted a value " + id;
         }
 
         // PUT api/<TestController>/5
         [HttpPut("{id}")]
-        public string Put(int id, [FromBody] string value)
+        public string Put(int id)
         {
-            return testPut;
+            return "put a value " + id; ;
         }
 
         // DELETE api/<TestController>/5
         [HttpDelete("{id}")]
         public string Delete(int id)
         {
-            return testDelete;
+            return "deleted a value " + id; ;
         }
     }
 }
