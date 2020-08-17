@@ -12,10 +12,6 @@ namespace SimpleTestApi.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-        string testPost = "posted a value";
-        string testPut = "put a value";
-        string testDelete = "deleted a value";
-
         // GET: api/<TestController>
         [HttpGet]
         public IEnumerable<string> Get()
